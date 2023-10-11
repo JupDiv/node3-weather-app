@@ -1,5 +1,5 @@
 const getWeather = (place) => {
-  const url = `http://localhost:3000/weather?address=${place}`;
+  const url = `/weather?address=${place}`;
   messageOne.textContent = "Page is loading";
   messageTwo.textContent = "";
   fetch(url)
