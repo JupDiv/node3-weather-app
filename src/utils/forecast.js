@@ -21,7 +21,6 @@ const forecast = (longitude, latitude, callback) => {
         wind_dir,
       } = body.current;
       const { location } = body;
-      console.log(body);
       callback(
         undefined,
         `${weather_descriptions[0]}. It's currently ${temperature} degress out. It feels like ${feelslike} degress out in ${location.name}, also we have humidity ${humidity}% and cloud cover about ${cloudcover}%. And we have wind direction ${wind_dir} `,
