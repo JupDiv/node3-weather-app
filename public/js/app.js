@@ -1,5 +1,3 @@
-console.log("Client side JS file is loading");
-
 const getWeather = (place) => {
   const url = `http://localhost:3000/weather?address=${place}`;
   messageOne.textContent = "Page is loading";
