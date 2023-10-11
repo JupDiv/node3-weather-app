@@ -12,11 +12,19 @@ const forecast = (longitude, latitude, callback) => {
     } else if (body.error) {
       callback("Unable to find the country, try again", undefined);
     } else {
-      const { temperature, feelslike, weather_descriptions } = body.current;
+      const {
+        temperature,
+        feelslike,
+        weather_descriptions,
+        humidity,
+        cloudcover,
+        wind_dir,
+      } = body.current;
       const { location } = body;
+      console.log(body);
       callback(
         undefined,
-        `${weather_descriptions[0]}. It's currently ${temperature} degress out. It feels like ${feelslike} degress out in ${location.name}`,
+        `${weather_descriptions[0]}. It's currently ${temperature} degress out. It feels like ${feelslike} degress out in ${location.name}, also we have humidity ${humidity}% and cloud cover about ${cloudcover}%. And we have wind direction ${wind_dir} `,
       );
     }
   });
