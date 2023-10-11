@@ -34,7 +34,6 @@ app.get("/help", (req, res) => {
     name: "Hlib Laskin",
   });
 });
-/**/
 app.get("/weather", (req, res) => {
   if (!req.query.address) {
     return res.send({
