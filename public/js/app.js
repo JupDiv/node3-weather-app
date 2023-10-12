@@ -1,3 +1,5 @@
+// need to understand how we can start geolocation api automatically
+
 const getWeather = (place) => {
   const url = `/weather?address=${place}`;
   messageOne.textContent = "Page is loading";
